@@ -7,7 +7,7 @@ It supports user authentication, secure CRUD operations, and JWT-based authoriza
 - User Registration & Login
 - Password Hashing using bcrypt
 - JWT Authentication
-- Create, Read, Update, Delete Blog Posts
+- Create, Read, Update, Delete Blog Posts and comments
 - Only post authors can update or delete their posts
 - MySQL Database Integration
 
@@ -28,6 +28,7 @@ blog-api/
 ├── routes/
 │ ├── auth.js
 │ └── posts.js
+| └── comments.js
 ├── server.js
 ├── .env
 ├── package.json
