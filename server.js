@@ -3,13 +3,15 @@ const cors = require('cors');
 require('dotenv').config();
 require('./config/db');
 const postRoutes = require('./routes/posts');
-
+const commentRoutes = require('./routes/comments');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use('/api/posts', postRoutes);
+app.use('/api/comments', require('./routes/comments'));
+app.use('/api/comments', commentRoutes);
 // Test route
 app.get('/', (req, res) => {
   res.send('Blog API is running');
